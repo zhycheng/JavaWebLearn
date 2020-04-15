@@ -1,4 +1,4 @@
-package com.servletcontext.test;
+package com06.servletcontext.test;
 
 import java.io.IOException;
 import java.util.Enumeration;
@@ -33,6 +33,8 @@ public class Demo1 extends HttpServlet {
 			String value=config.getInitParameter(key);
 			System.out.println("key:"+key+" value:"+value);
 		}
+		String realpath=config.getRealPath("");
+		System.out.println("realpath:"+realpath);
 		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}

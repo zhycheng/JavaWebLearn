@@ -1,4 +1,4 @@
-package com.useeclipse.servlet;
+package com03.useeclipse.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

@@ -9,20 +9,27 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <listener>
+  <listener-class>com13.ServletContextListnerImp.MyContextListener</listener-class>
+  </listener>
+   <listener>
+  <listener-class>com14.HttpSessionListenerTest.MyHttpSessionListener</listener-class>
+  </listener>
+     <listener>
+  <listener-class>com15.ServletRequestListenerTest.RequestListenerTest</listener-class>
+  </listener>
+  
   <context-param>
-  	<param-name>name</param-name>
-  	<param-value>zhy</param-value>
+    <param-name>name</param-name>
+    <param-value>zhy</param-value>
   </context-param>
-    <context-param>
-  	<param-name>ps</param-name>
-  	<param-value>123</param-value>
+  <context-param>
+    <param-name>ps</param-name>
+    <param-value>123</param-value>
   </context-param>
-  
-  
-  
   <servlet>
     <servlet-name>HelloServlet</servlet-name>
-    <servlet-class>com.Demo.ServletHello.TestHello</servlet-class>
+    <servlet-class>com1.Demo.ServletHello.TestHello</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>HelloServlet</servlet-name>
@@ -30,7 +37,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>HttpServletHH</servlet-name>
-    <servlet-class>com.Demo.Usehttpservlet.UseHttpServletHere</servlet-class>
+    <servlet-class>com02.Demo.Usehttpservlet.UseHttpServletHere</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>HttpServletHH</servlet-name>
@@ -40,7 +47,7 @@
     <description></description>
     <display-name>UseEclipse</display-name>
     <servlet-name>UseEclipse</servlet-name>
-    <servlet-class>com.useeclipse.servlet.UseEclipse</servlet-class>
+    <servlet-class>com03.useeclipse.servlet.UseEclipse</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UseEclipse</servlet-name>
@@ -50,7 +57,7 @@
     <description></description>
     <display-name>ServlertLoadTest</display-name>
     <servlet-name>ServlertLoadTest</servlet-name>
-    <servlet-class>com.servlertload.ServlertLoadTest</servlet-class>
+    <servlet-class>com04.servlertload.ServlertLoadTest</servlet-class>
     <load-on-startup>2</load-on-startup>
   </servlet>
   <servlet-mapping>
@@ -61,7 +68,7 @@
     <description></description>
     <display-name>TestServletConfig</display-name>
     <servlet-name>TestServletConfig</servlet-name>
-    <servlet-class>UseServletConfig.TestServletConfig</servlet-class>
+    <servlet-class>com05.UseServletConfig.TestServletConfig</servlet-class>
     <init-param>
       <param-name>username</param-name>
       <param-value>root</param-value>
@@ -77,12 +84,112 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>Demo1</display-name>
-    <servlet-name>Demo1</servlet-name>
-    <servlet-class>com.servletcontext.test.Demo1</servlet-class>
+    <display-name>Demo11</display-name>
+    <servlet-name>Demo11</servlet-name>
+    <servlet-class>com06.servletcontext.test.Demo1</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Demo1</servlet-name>
-    <url-pattern>/Demo1</url-pattern>
+    <servlet-name>Demo11</servlet-name>
+    <url-pattern>/Demo11</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Dem01</display-name>
+    <servlet-name>Dem01</servlet-name>
+    <servlet-class>com07.ServletContextAttribute.Dem01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dem01</servlet-name>
+    <url-pattern>/Dem01</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Demo2</display-name>
+    <servlet-name>Demo2</servlet-name>
+    <servlet-class>com07.ServletContextAttribute.Demo2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Demo2</servlet-name>
+    <url-pattern>/Demo2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ResponseTest</display-name>
+    <servlet-name>ResponseTest</servlet-name>
+    <servlet-class>com08.ResponseTest.ResponseTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResponseTest</servlet-name>
+    <url-pattern>/ResponseTest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ResponseTest02</display-name>
+    <servlet-name>ResponseTest02</servlet-name>
+    <servlet-class>com08.ResponseTest.ResponseTest02</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResponseTest02</servlet-name>
+    <url-pattern>/ResponseTest02</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TimeRefresh</display-name>
+    <servlet-name>TimeRefresh</servlet-name>
+    <servlet-class>com09.ResponseTimeRefresh.TimeRefresh</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TimeRefresh</servlet-name>
+    <url-pattern>/TimeRefresh</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UseStream</display-name>
+    <servlet-name>UseStream</servlet-name>
+    <servlet-class>com10.SetChineseCode.UseStream</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UseStream</servlet-name>
+    <url-pattern>/UseStream</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UseWriter</display-name>
+    <servlet-name>UseWriter</servlet-name>
+    <servlet-class>com10.SetChineseCode.UseWriter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UseWriter</servlet-name>
+    <url-pattern>/UseWriter</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RequestTest01</display-name>
+    <servlet-name>RequestTest01</servlet-name>
+    <servlet-class>com11.RequestDemo.RequestTest01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestTest01</servlet-name>
+    <url-pattern>/RequestTest01</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RequestTest02</display-name>
+    <servlet-name>RequestTest02</servlet-name>
+    <servlet-class>com11.RequestDemo.RequestTest02</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestTest02</servlet-name>
+    <url-pattern>/RequestTest02</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>VisitServlet</display-name>
+    <servlet-name>VisitServlet</servlet-name>
+    <servlet-class>com12.UseCookie.VisitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VisitServlet</servlet-name>
+    <url-pattern>/VisitServlet</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -1,4 +1,4 @@
-package com.Demo.Usehttpservlet;
+package com02.Demo.Usehttpservlet;
 
 import java.io.IOException;
 

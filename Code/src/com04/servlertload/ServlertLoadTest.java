@@ -1,8 +1,6 @@
-package UseServletConfig;
+package com04.servlertload;
 
 import java.io.IOException;
-import java.util.Enumeration;
-
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,35 +8,33 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class TestServletConfig
+ * Servlet implementation class ServlertLoadTest
  */
-public class TestServletConfig extends HttpServlet {
+public class ServlertLoadTest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public TestServletConfig() {
+    public ServlertLoadTest() {
         super();
         // TODO Auto-generated constructor stub
     }
+
+	/**
+	 * @see Servlet#init(ServletConfig)
+	 */
+	public void init(ServletConfig config) throws ServletException {
+		// TODO Auto-generated method stub
+		System.out.println("servlet load!");
+	}
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ServletConfig sc=this.getServletConfig();  
-		String username=sc.getInitParameter("username");
-		String password=sc.getInitParameter("password");
-		System.out.println("username: "+username+" password:"+password);
-		System.out.println("getname:"+sc.getServletName());
-		Enumeration<String> names=sc.getInitParameterNames();
-		while(names.hasMoreElements())
-		{
-			String key=names.nextElement();
-			String value=sc.getInitParameter(key);
-			System.out.println("key:"+value+" value:"+value);
-		}
-	
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
